@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="fondo">
 	<head>
 		<meta charset="UTF-8">
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -11,19 +11,60 @@
 		<title>Lauburu Inform&aacute;tica</title>
 	</head>
 	<body onload="DisplayTime()">
-		<header class="navbar navbar-default navbar-static-top">
-			<a href="/" class="navbar-brand">Lauburu</a>
-			<nav class="container">
-				<ul class="nav navbar-nav">
-					<li><a href="/">Google+</a></li>
-					<li><a href="/">Twitter</a></li>
-					<li><a href="/">Facebook</a></li>
-					<li><a href="/">LinkedIn</a></li>
+		<header class="container">
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<a href="#" class="navbar-brand" data-toggle="dropdown">Lauburu<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Servicios<span class="caret-right"></span></a></li>
+					<li class="dropdown-submenu"><a href="#" data-toggle="dropdown">Equipos</a>
+						<ul class="dropdown-menu">
+							<li><a>Lauburu gamer</a></li>
+							<li><a>Lauburu office</a></li>
+							<li><a>Lauburu server</a></li>
+							<li><a>Lauburu workstation</a></li>
+							<li><a>Lauburu mediacenter</a></li>
+						</ul>
+					</li>
+					<li class="dropdown-submenu"><a href="#">Recursos libres</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu"><a>Gr&aacute;ficos</a>
+								<ul class="dropdown-menu">
+									<li><a>Kirta</a></li>
+									<li><a>Gimp</a></li>
+									<li><a>Inkscape</a></li>
+									<li><a>Blender</a></li>
+									<li><a>LibreCAD</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu"><a>Sistemas operativos</a>
+								<ul class="dropdown-menu">
+									<li><a>Minino</a></li>
+									<li><a>Trisquel</a></li>
+									<li><a>Proxmox</a></li>
+									<li><a>Zentyal</a></li>
+									<li><a>Linux Mint</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu"><a>Ofim&aacute;tica</a>
+								<ul class="dropdown-menu">
+									<li><a>Libreoffice</a></li>
+									<li><a>Thunderbird</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">Blog<span class="caret-right"></span></a></li>
 				</ul>
+				<ul class="nav navbar-nav navbar-left">
+					<li><a href="#">Google+</a></li>
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">LinkedIn</a></li>
+				</ul>
+				<div id="current_time"></div>
 			</nav>
-			<div id="current_time"></div>
 		</header>
-		<main></main>
+		<main class="container well"></main>
 		<footer></footer>
 	</body>
 </html>
