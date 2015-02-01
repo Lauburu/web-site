@@ -1,13 +1,45 @@
+html, body{
+	width:100%;
+	height:100%;
+	}
+body{ background:transparent;}
+main{
+	width:90%;
+	height:90%;
+	margin:auto;
+	position:relative;
+	top:8%;
+	border:1px solid black;
+	overflow:hidden;
+	}
+
+.software{
+	width:30%;
+	height:40%;
+	display:block;
+	float:left;
+	}
+	
+div.soft_header{
+	width:100%;
+	height:10%;
+	border:1px solid red;
+	}
+
+.window{
+	border:1px dotted black;
+	}
+
 .fondo{
-background: #f0f9ff; /* Old browsers */
-background: -moz-linear-gradient(left, #f0f9ff 0%, #cbebff 0%, #a1dbff 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f0f9ff), color-stop(0%,#cbebff), color-stop(100%,#a1dbff)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(left, #f0f9ff 0%,#cbebff 0%,#a1dbff 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(left, #f0f9ff 0%,#cbebff 0%,#a1dbff 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(left, #f0f9ff 0%,#cbebff 0%,#a1dbff 100%); /* IE10+ */
-background: linear-gradient(to right, #f0f9ff 0%,#cbebff 0%,#a1dbff 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=1 ); /* IE6-9 */
-}
+	background: #f0f9ff; /* Old browsers */
+	background: -moz-linear-gradient(left, #f0f9ff 0%, #cbebff 0%, #a1dbff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f0f9ff), color-stop(0%,#cbebff), color-stop(100%,#a1dbff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #f0f9ff 0%,#cbebff 0%,#a1dbff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #f0f9ff 0%,#cbebff 0%,#a1dbff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #f0f9ff 0%,#cbebff 0%,#a1dbff 100%); /* IE10+ */
+	background: linear-gradient(to right, #f0f9ff 0%,#cbebff 0%,#a1dbff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=1 ); /* IE6-9 */
+	}
 
 #current_time{ width:8%; margin:0.7% 1% 0 0; top:1%; right:1%; position:absolute;}
 
