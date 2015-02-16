@@ -13,22 +13,22 @@
 	<body onload="DisplayTime()">
 		<header class="container">
 			<nav class="navbar navbar-default navbar-fixed-top">
-				<a href="#" class="navbar-brand" data-toggle="dropdown">Lauburu<span class="caret"></span></a>
+				<img id="logo" /><a href="#" class="navbar-brand" data-toggle="dropdown">Lauburu<span class="caret"></span></a>
 				<ul class="dropdown-menu">
 					<li><a href="#">Servicios</span></a></li>
 					<li class="dropdown-submenu"><a href="#" data-toggle="dropdown">Equipos</a>
-						<ul class="dropdown-menu">
-							<li><a data-type="PC" data-name="gamer">Lauburu gamer</a></li>
-							<li><a data-type="PC" data-name="office">Lauburu office</a></li>
-							<li><a data-type="PC" data-name="server">Lauburu server</a></li>
-							<li><a data-type="PC" data-name="work">Lauburu workstation</a></li>
-							<li><a data-type="PC" data-name="media">Lauburu mediacenter</a></li>
+						<ul data-section="PC" class="dropdown-menu">
+							<li><a data-fname="0" data-type="gamer">Lauburu gamer</a></li>
+							<li><a data-fname="0" data-type="office">Lauburu office</a></li>
+							<li><a data-fname="0" data-type="server">Lauburu server</a></li>
+							<li><a data-fname="0" data-type="work">Lauburu workstation</a></li>
+							<li><a data-fname="0" data-type="media">Lauburu mediacenter</a></li>
 						</ul>
 					</li>
 					<li class="dropdown-submenu"><a href="#">Recursos libres</a>
 						<ul class="dropdown-menu">
 							<li class="dropdown-submenu"><a>Sistemas operativos</a>
-								<ul data-ftype="0" class="dropdown-menu">
+								<ul data-section ="SOFT" data-ftype="0" class="dropdown-menu">
 									<li><a data-fname="0" data-type="SO" data-name="minino">Minino</a></li>
 									<li><a data-fname="0" data-type="SO" data-name="trisquel">Trisquel</a></li>
 									<li><a data-fname="0" data-type="SO" data-name="proxmox">Proxmox</a></li>
@@ -37,7 +37,7 @@
 								</ul>
 							</li>
 							<li class="dropdown-submenu"><a>Gr&aacute;ficos</a>
-								<ul data-ftype="0" class="dropdown-menu">
+								<ul data-section ="SOFT" data-ftype="0" class="dropdown-menu">
 									<li><a data-fname="0" data-type="GR" data-name="krita">Krita</a></li>
 									<li><a data-fname="0" data-type="GR" data-name="gimp">Gimp</a></li>
 									<li><a data-fname="0" data-type="GR" data-name="inkscape">Inkscape</a></li>
@@ -46,21 +46,22 @@
 								</ul>
 							</li>
 							<li class="dropdown-submenu"><a>Ofim&aacute;tica</a>
-								<ul data-ftype="0" class="dropdown-menu">
+								<ul data-section ="SOFT" data-ftype="0" class="dropdown-menu">
 									<li><a data-fname="0" data-type="OF" data-name="libreoffice">Libreoffice</a></li>
 									<li><a data-fname="0" data-type="OF" data-name="thunderbird">Thunderbird</a></li>
 									<li><a data-fname="0" data-type="OF" data-name="keme">Keme</a></li><!-- http://keme.sourceforge.net/ -->
+									<li><a data-fname="0" data-type="OF" data-name="gnuhealth">GNU Health</a></li><!-- http://health.gnu.org/es/index.html -->
 								</ul>
 							</li>
 							<li class="dropdown-submenu"><a>Multim&eacute;dia</a>
-								<ul data-ftype="0" class="dropdown-menu">
+								<ul data-section ="SOFT" data-ftype="0" class="dropdown-menu">
 									<li><a data-fname="0" data-type="MU" data-name="audacity">Audacity</a></li>
 									<li><a data-fname="0" data-type="MU" data-name="xcfa">XCFA</a></li>
 									<li><a data-fname="0" data-type="MU" data-name="vlc">VLC</a></li>
 								</ul>
 							</li>
 							<li class="dropdown-submenu"><a>P2P</a>
-								<ul data-ftype="0" class="dropdown-menu">
+								<ul data-section ="SOFT" data-ftype="0" class="dropdown-menu">
 									<li><a data-fname="0" data-type="P2" data-name="transmission">Transmission</a></li>
 									<li><a data-fname="0" data-type="P2" data-name="nicotine">Nicotine</a></li>
 								</ul>
@@ -70,12 +71,12 @@
 					<li><a href="http://blog.lauburu-informatica.es" target="_blank">Blog</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-left">
-					<li><a href="#">Google+</a></li>
-					<li><a href="#">Twitter</a></li>
-					<li><a href="#">Friendica</a></li>
-					<li><a href="#">LinkedIn</a></li>
-					<li><a href="#">Identi.ca</a></li>
-					<li><a href="#">Quitter</a></li><!-- https://quitter.is/ -->
+					<li id="rs-google"><a href="#1"></a></li>
+					<li id="rs-twitter"><a href="#2"></a></li>
+					<li id="rs-friendica"><a href="#3"></a></li>
+					<li id="rs-linkedin"><a href="#4"></a></li>
+					<li id="rs-identica"><a href="#5"></a></li>
+					<li id="rs-quitter"><a href="#6"></a></li><!-- https://quitter.is/ -->
 				</ul>
 				<div id="current_time"></div>
 			</nav>

@@ -16,22 +16,22 @@ function DisplayTime(){ // Show current time dynamically
 	document.getElementById('current_time').innerHTML=currentTime;
 	setTimeout("DisplayTime()",1000);
 	}
-	
-function pc(type) { // Call to pc profiles
+
+function pcinfo(name){
 	$.ajax({
 		type: "POST",
-		url: "php/lauburu_pc.php",
-		data: "pc="+type,
+		url: "php/"+name+".php",
+		data: "name="+name,
 		async: false,
-		success: function(data){ $("main").html(data)}
+		success: function(data){ $("main").append(data)}
 		});
 	}
-	
-function soft(type,name) { // Call to software
+
+function info(sect,type,name) { // Call to software
 	$.ajax({
 		type: "POST",
-		url: "php/lauburu_software.php",
-		data: "soft="+type+"&name="+name,
+		url: "php/lauburu_data.php",
+		data: "section="+sect+"&type="+type+"&name="+name,
 		async: false,
 		success: function(data){ $("main").append(data)}
 		});
@@ -45,26 +45,30 @@ $(document).ready(function () {
 	    $(this).parent().find("ul").parent().find("li.dropdown").addClass("open");
 		});
 		
-	$("li > a").on("click", function(e){
-		e.preventDefault();
-		if ( $(this).data("type") === "PC") { 										// If PCprofile is clicked
-			pc($(this).data("name"));
-			} 			
-		else if ( $(this).data("type") ){ 											// If Software is clicked ...
-			$("#ShowPC").remove();
-			// Si hay un PC cargado, ¿como borrarlo para mostrar la info del software?
+	$("li > a").on("click", function(){
+		//e.preventDefault();
+		if ( $(this).closest("ul").data("section") === "PC" ) {						// If PCprofile is clicked
+			if( $(this).data("fname") == 0 ){
+				info($(this).closest("ul").data("section"),$(this).data("type"),$(this).data("type"));
+				$(this).data("fname",1);
+			}else{
+				$("section[data-name='" + $(this).data("type") +"']").remove();
+				$(this).data("fname",0);
+				}
+			}
+		else if ( $(this).closest("ul").data("section") === "SOFT" ){ 				// If Software is clicked ...
 			if( $(this).closest("ul").data("ftype") == 0 ){ 						// ... and another one is active and is his 1st time, enable
-				soft($(this).data("type"),$(this).data("name"));
+				info($(this).closest("ul").data("section"),$(this).data("type"),$(this).data("name"));
 				$(this).closest("ul").data("ftype",1);
 				$(this).data("fname",1);
 			}else {
-				if( $(this).data("fname") == 1){ 									// ... and is his 2nd time, diseable
+				if( $(this).data("fname") == 1){ 									// ... and is his 2nd time, disable
 					$("section[data-name='" + $(this).data("name") +"']").remove();
 					$(this).closest("ul").data("ftype",0);
 					$(this).data("fname",0);
 				}else{ 																// ... and was not chosen before, enable
 					$("section[data-type='" + $(this).data("type") +"']").remove();	
-					soft($(this).data("type"),$(this).data("name"));				
+					info($(this).closest("ul").data("section"),$(this).data("type"),$(this).data("name"));				
 					$(this).data("fname",1);
 					}
 				}

@@ -1,8 +1,6 @@
-html, body{
-	width:100%;
-	height:100%;
-	}
+html, body{ width:100%; height:100%;}
 body{ background:transparent;}
+hr { margin-top: 0px;}
 main{
 	width:90%;
 	height:90%;
@@ -12,23 +10,28 @@ main{
 	border:1px solid black;
 	overflow:hidden;
 	}
-
-.software{
-	width:30%;
-	height:40%;
-	display:block;
-	float:left;
-	}
 	
 div.soft_header{
 	width:100%;
-	height:10%;
+	height:13%;
 	border:1px solid red;
+	background:none repeat scroll 0 0 #aaf;
 	}
 
-.window{
-	border:1px dotted black;
+div.pc_header{
+	width:100%;
+	height:5%;
 	}
+
+.software{
+	width:22%;
+	height:25%;
+	display:block;
+	float:left;
+	background:none repeat scroll 0 0 #eea;
+	}
+
+.window{ border:1px dotted black; margin:1%;}
 
 .fondo{
 	background: #f0f9ff; /* Old browsers */
@@ -40,8 +43,13 @@ div.soft_header{
 	background: linear-gradient(to right, #f0f9ff 0%,#cbebff 0%,#a1dbff 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=1 ); /* IE6-9 */
 	}
+	
+.data_content{ width:100%; height:75%; text-align:justify;}
+.showit { display:block; float:left;}
+.show_pc { margin:auto; width:80%; height: 100%; border:1px solid white;}
 
 #current_time{ width:8%; margin:0.7% 1% 0 0; top:1%; right:1%; position:absolute;}
+/*#mini{ display:none;}*/
 
 /************************ Submenus *************************************/
 .dropdown-submenu { position:relative;}
@@ -77,4 +85,79 @@ div.soft_header{
     -moz-border-radius:6px 0 6px 6px;
     border-radius:6px 0 6px 6px;
 	}
-	
+
+/************************ Logos redes sociales ********************************/
+
+#logo, #rs-twitter, #rs-identica, #rs-quitter, #rs-friendica, #rs-linkedin, #rs-google, #rs-correo, 
+#lg-minino, #lg-trisquel, #lg-linuxmint, #lg-proxmox, #lg-zentyal, #lg-krita, #lg-gimp, #lg-inkscape, 
+#lg-blender, #lg-librecad, #lg-libreoffice, #lg-thunderbird, #lg-keme, #lg-audacity, #lg-xcfa, #lg-vlc, 
+#lg-transmission, #lg-nicotine, #lg-gnuhealth {
+	background: url('../img/logosapp.png') no-repeat;
+	width: 32px;
+	height: 32px;
+	margin: 7px;
+}
+#logo{ background-position: 0 0;}
+#rs-google { background-position: -33px 0;}
+#rs-twitter { background-position: -65px 0;}
+#rs-friendica { background-position: -98px 0;}
+#rs-linkedin { background-position: -131px 0;}
+#rs-identica { background-position: -165px 0;}
+#rs-quitter { background-position: -198px 0;}
+#rs-correo { background-position: -224px 0;}
+#lg-minino { background-position: -265px 0;}
+#lg-trisquel { background-position: -297px 0;}
+#lg-proxmox { background-position: -330px 0;}
+#lg-zentyal { background-position: -364px 0;}
+#lg-linuxmint { background-position: -398px 0;}
+#lg-krita { background-position: -430px 0;}
+#lg-gimp { background-position: -462px 0;}
+#lg-inkscape { background-position: -497px 0;}
+#lg-blender { background-position: -529px 0;}
+#lg-librecad { background-position: -562px 0;}
+#lg-libreoffice { background-position: -595px 0;}
+#lg-thunderbird { background-position: -628px 0;}
+#lg-keme { background-position: -661px 0;}
+#lg-audacity { background-position: -694px 0;}
+#lg-xcfa { background-position: -727px 0;}
+#lg-vlc { background-position: -760px 0;}
+#lg-transmission { background-position: -793px 0;}
+#lg-nicotine { background-position: -826px 0;}
+#lg-gnuhealth { background-position: -860px 0;}
+
+/*------------------logos 16px----------------------*/
+
+#logo16, #rs-twitter16, #rs-identica16, #rs-quitter16, #rs-friendica16, #rs-linkedin16, #rs-google16, #rs-correo16,
+#lg-minino16, #lg-trisquel16, #lg-linuxmint16, #lg-proxmox16, #lg-zentyal16, #lg-krita16, #lg-gimp16, #lg-inkscape16,
+#lg-blender16, #lg-librecad16, #lg-libreoffice16, #lg-thunderbird16, #lg-keme16, #lg-audacity16, #lg-xcfa16, #lg-vlc16,
+#lg-transmission16, #lg-nicotine16 {
+	background: url('../img/logosapp16.png') no-repeat;
+	width: 16px;
+	height: 16px;
+}
+#logo16 { background-position: 0 0;}
+#rs-google16 { background-position: -16px 0;}
+#rs-twitter16 { background-position: -32px 0;}
+#rs-friendica16 { background-position: -48px 0;}
+#rs-linkedin16 { background-position: -64px 0;}
+#rs-identica16 { background-position: -80px 0;}
+#rs-quitter16 { background-position: -96px 0;}
+#rs-correo16 { background-position: -112px 0;}
+#lg-minino16 { background-position: -128px 0;}
+#lg-trisquel16 { background-position: -144px 0;}
+#lg-proxmox16 { background-position: -160px 0; width: 15px;	height: 15px;}
+#lg-zentyal16 { background-position: -176px 0;}
+#lg-linuxmint16 { background-position: -192px 0;}
+#lg-krita16 { background-position: -208px 0;}
+#lg-gimp16 { background-position: -224px 0;}
+#lg-inkscape16 { background-position: -239px 0;}
+#lg-blender16 { background-position: -255px 0;}
+#lg-librecad16 { background-position: -272px 0;}
+#lg-libreoffice16 { background-position: -287px 0;}
+#lg-thunderbird16 { background-position: -303px 0;}
+#lg-keme16 { background-position: -319px 0;}
+#lg-audacity16 { background-position: -335px 0;}
+#lg-xcfa16 { background-position: -351px 0;}
+#lg-vlc16 { background-position: -367px 0;}
+#lg-transmission16 { background-position: -382px 0;}
+#lg-nicotine16 { background-position: -398px 0;}
